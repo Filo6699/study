@@ -3,6 +3,7 @@
 This repository contains my collection of assignments and tasks related to my studies.
 
 Group: IT-2405
+
 Student: Radmir Manyapov
 
 ### Folder Structure
