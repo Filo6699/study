@@ -25,6 +25,10 @@ int main() {
     cout << "x + y = " << x + y << "\n";
     cout << "x - y = " << x - y << "\n";
     cout << "x * y = " << x * y << "\n";
-    cout << "x / y = " << x / y << "\n\n";
+    if (y == 0) {
+        cout << "Division by zero is not possbile\n";
+    } else {
+        cout << "x / y = " << x / y << "\n\n";
+    }
     cout << RESET_COLOR;
 }
