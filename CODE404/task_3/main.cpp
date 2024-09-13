@@ -1,14 +1,34 @@
-#include <iostream>
-#include <unistd.h>  // For usleep function to simulate delay
+#include <bits/stdc++.h>
 
-#define MOVE_UP "\033[A\033[G"
-#define cout std::cout << MOVE_UP
+using namespace std;
+
+const string RESET_COLOR = "\033[0m";
+const string BLUE_COLOR = "\033[34m";
+const string GRAY_COLOR = "\033[38;5;243m";
+const string YELLOW_COLOR = "\033[38;5;11m";
 
 int main() {
-    cout << "Meow" << std::flush;
-    usleep(500000);
-    cout << "Meow 2" << std::flush;
-    usleep(500000);
-    cout << "Meow 3" << std::flush;
-    usleep(500000);
+    cout << BLUE_COLOR;
+    cout << "\nCircle Area\n\n";
+    cout << RESET_COLOR;
+
+    cout << "Calculate the area of a circle using its radius\n\n";
+    cout << GRAY_COLOR << "Enter the radius: ";
+    cout << RESET_COLOR;
+    double radius;
+    cin >> radius;
+
+    double radius_squared = radius * radius;
+    double est_area = M_PI * (radius_squared);
+
+    cout << GRAY_COLOR;
+    cout << "\nArea = πr²\n";
+    cout << "Area = " << radius_squared << "π\n";
+    cout << "Area ≈ " << est_area << "\n\n";
+    cout << RESET_COLOR;
+
+    cout << "Area of the circle: ";
+    cout << YELLOW_COLOR << radius_squared << "π";
+    cout << " ≈ " << est_area << "\n\n";
+    cout << RESET_COLOR;
 }
